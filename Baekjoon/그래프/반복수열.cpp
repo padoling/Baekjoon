@@ -6,11 +6,10 @@ int next(int a, int p) {
   int ans = 0;
   for(int i=0; a!=0; i++) {
     int temp = a%10;
-    int t = 1;
-    for(int j=0; j<p; j++) {
-      t *= temp;
+    for(int j=1; j<p; j++) {
+      temp *= temp;
     }
-    ans += t;
+    ans += temp;
     a /= 10;
   }
   return ans;
